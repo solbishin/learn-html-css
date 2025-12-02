@@ -1,0 +1,52 @@
+/* 색상 및 배경 */
+/* color 배경 */
+div {
+  margin: 20px;
+}
+
+.like {
+  color: red;
+  color: #f00;
+  color: rgba(255, 0, 0, 0.5);
+  color: rgb(255 0 0 / 0.5);
+  color: hsla(110, 50%, 20%, 0.5);
+}
+
+/* backgorund-color 속성 */
+.wrapper {
+  background-color: blue;
+  padding: 5px;
+
+  .euid {
+    background-color: yellow;
+  }
+}
+
+/* background-image */
+/* background-repeat */
+/* background-position */
+/* background - size */
+/* background */
+.container {
+  border: 1px solid red;
+  /* margin-block: 20px;
+  background-size:
+    contain,
+    100px 50px;
+  background-image: url(/src/assets/images/tree.png), url(/src/assets/images/cloud.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    50% 0,
+    70% 0; */
+  /* background:
+    url(/src/assets/images/tree.png) no-repeat 50% 0 / contain,
+    url(/src/assets/images/cloud.png) no-repeat 70% 0 /100px 50px; */
+  background: pink url(/src/assets/images/rabbit.png) no-repeat 50% 0 / contain;
+}
+
+/* background-image: linear-gradient()  */
+.frontend {
+  border: 5px solid blue;
+  background-image: linear-gradient(red, green);
+  border-radius: 20px;
+}
