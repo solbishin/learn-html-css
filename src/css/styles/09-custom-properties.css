@@ -1,11 +1,10 @@
 /* 사용자 정의 속성 */
-/* 전역 변수 */
 @property --primary-color {
   syntax: '<color>';
   inherits: false;
   initial-value: rgb(8 118 97);
 }
-
+/* 전역 변수 */
 :root {
   --main-color: gray;
   --default-color: pink;
@@ -27,8 +26,8 @@ body {
   margin-block: 20px;
   border: 1px solid var(--main-color);
   background: var(--default-color);
-}
 
-.euid {
-  color: var(--primary-color);
+  .euid {
+    color: var(--primary-color);
+  }
 }
