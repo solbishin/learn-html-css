@@ -47,12 +47,12 @@
   .avatar-item {
     width: 64px;
     height: 64px;
-    box-shadow: 0 0 0px 1px currentColor;
+    /* box-shadow: 0 0 0px 1px currentColor; */
     float: left;
     margin: 10px;
 
     &:nth-child(5) {
-      background: yellow;
+      /* background: yellow; */
       clear: left;
     }
   }
