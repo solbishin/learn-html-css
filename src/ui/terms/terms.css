@@ -1,0 +1,13 @@
+/* 웹 관련 용어 */
+/* 컴포넌트 */
+.term {
+  background: #ffc;
+  font-size: 0.875rem;
+  line-height: 1.5;
+
+  strong {
+    color: #296897;
+    font-weight: 700;
+  }
+}
+/* 레이아웃 */
