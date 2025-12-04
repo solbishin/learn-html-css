@@ -36,3 +36,24 @@
     }
   }
 }
+
+.avatar-list {
+  /* background: #ffc; */
+  width: 596px;
+  height: 396px;
+  box-shadow: 0 0 4px 1px currentColor;
+  padding: 110px 130px;
+
+  .avatar-item {
+    width: 64px;
+    height: 64px;
+    box-shadow: 0 0 0px 1px currentColor;
+    float: left;
+    margin: 10px;
+
+    &:nth-child(5) {
+      background: yellow;
+      clear: left;
+    }
+  }
+}
