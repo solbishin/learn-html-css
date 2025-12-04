@@ -30,3 +30,7 @@
   padding: 0.5em 1em;
   border-radius: 4px;
 }
+
+body {
+  font-family: 'SUIT Variable', sans-serif;
+}
