@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아바타 UI</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/avatars/avatars.css" />
+    <script type="module" src="/src/ui/js/copy-component.js"></script>
+  </head>
+  <body class="css">
+    <a href="/index.html">Index로 이동</a>
+    <h1>아바타 UI</h1>
+    <hr />
+    <h2>온라인 상태</h2>
+    <div class="ui-component">
+      <button type="button" class="avatar" aria-label="온라인">
+        <img src="/src/assets/face/face1.webp" width="64px" height="64px" alt="아바타 이름" />
+        <span class="avatar-state is-online"></span>
+      </button>
+      <button type="button" class="copy-component">복사</button>
+    <h2>오프라인 상태</h2>
+    <div class="ui-component">
+      <button type="button" class="avatar" aria-label="오프라인">
+        <img src="/src/assets/face/face1.webp" width="64px" height="64px" alt="아바타 이름" />
+        <span class="avatar-state"></span>
+      </button>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <hr />
+    <h2>온라인 상태</h2>
+    <div class="ui-component">
+      <button type="button" class="avatar likelion" role="switch" aria-checked="true" aria-label="온라인 상태 토글" data-state="online">
+        <img src="/src/assets/face/face1.webp" width="64px" height="64px" alt="아바타 이름" />
+        <span class="avatar-state is-online" aria-hidden="true"></span>
+        <span class="sr-only" aria-live="polite">온라인</span>
+      </button>
+      <button type="button" class="copy-component">복사</button>
+    <h2>오프라인 상태</h2>
+    <div class="ui-component">
+      <figure class="avatar">
+        <img src="/src/assets/face/face1.webp" width="64px" height="64px" alt="아바타 이름" />
+        <figcaption class="avatar-state"><span class="sr-only">오프라인</span></figcaption>
+      </figure>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+  </body>
+</html>
