@@ -1,0 +1,63 @@
+/* 유틸리티 바 */
+.utility-bar {
+  --spacing: 8px;
+
+  /* background: yellow; */
+  font-size: 0.875rem;
+  display: flow-root;
+  text-transform: uppercase;
+  padding: calc(var(--spacing) / 2);
+
+  li {
+    float: inline-start;
+    display: flow-root;
+
+    span,
+    a {
+      float: inline-start;
+      padding: calc(var(--spacing) / 2);
+    }
+  }
+}
+
+.utility-bar-before {
+  --spacing: 8px;
+
+  /* background: yellow; */
+  font-size: 0.875rem;
+  display: flow-root;
+  text-transform: uppercase;
+  padding: calc(var(--spacing) / 2);
+
+  li {
+    float: inline-start;
+  }
+  li:nth-child(n + 2)::before {
+    content: '|';
+  }
+
+  li:nth-child(n + 2)::before {
+    float: inline-start;
+    padding: calc(var(--spacing) / 2);
+  }
+
+  a {
+    float: left;
+    background: pink;
+    padding: 4px;
+  }
+}
+
+/* a {
+  font-size: 0.875rem;
+}
+
+li {
+  /* background-color: #cfc; */
+/* float: inline-start;
+  margin: 8px 0; */
+
+/* span {
+    margin: 0 8px 0 8px;
+  }
+} */
