@@ -1,6 +1,6 @@
 /* 테이블 스타일링 */
 .members-wrapper {
-  background: var(--yellow);
+  /* background: var(--yellow); */
   border: 1px solid var(--black);
   block-size: 500px;
   overflow: auto;
@@ -41,8 +41,8 @@
 
   th,
   td {
-    font-size: 14px;
-    padding: 0.5em 1em;
+    padding: 1em;
     text-align: center;
+    white-space: nowrap;
   }
 }
