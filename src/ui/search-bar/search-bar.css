@@ -1,0 +1,32 @@
+/* 검색어 입력서식 */
+.searchbar {
+  background: yellow;
+
+  .circle-gradient {
+    --size: 48px;
+
+    background: linear-gradient(lime, green);
+    border: 0;
+    padding: 0;
+    width: var(--size);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+
+    &::before {
+      --inner-size: calc(var(--size) / 3);
+
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      /* transform: translate(-50%, -50%); -> 처음 등장한 방식*/
+      /* translate -> 최근 새로 등장한 방식  */
+      translate: -50% -50%;
+      width: calc(var(--inner-size) / var(--size) * 100%);
+      height: calc(var(--inner-size) / var(--size) * 100%);
+      background: #fff;
+      border-radius: inherit;
+    }
+  }
+}
