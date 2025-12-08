@@ -1,0 +1,224 @@
+/* 알림 UI */
+/* 컴포넌트 */
+/* flex를 활용한 레이아웃 */
+.notification {
+  --green: #22be61;
+  --gray: #929b90;
+  --white: #fff;
+  --black: #121212;
+  --brown: #e3a368;
+  --silver: #f8fefe;
+
+  --point-color: var(--green);
+  --text-color: var(--gray);
+  --bg-color: var(--white);
+  --svg-path-color: var(--white);
+  --spacing: 1.25rem;
+  --border-color: var(--silver);
+
+  /* background: var(--yellow); */
+  gap: var(--spacing);
+  flex-flow: nowrap row;
+
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  color: var(--point-color);
+  display: flex;
+
+  background: var(--bg-color);
+  box-shadow: 0 0 2px 0 rgba(114, 119, 124, 0.8);
+
+  div {
+    flex: 1 1 0;
+  }
+
+  strong {
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  p {
+    color: var(--gray, #929b90);
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  time {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
+/* flex 레이아웃 수정 */
+/* .notification {
+  background: var(--yellow);
+  padding: 1.25rem;
+  display: flex;
+  gap: 1.25rem;
+
+  svg {
+    color: #22be61;
+  }
+  div {
+    box-shadow: 0 0 0 .0625rem blue;
+    flex: 1 1 0;
+  }
+
+  strong {
+    color: #22be61;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: #929b90;
+    font-size: .875rem;
+    font-weight: 400;
+  }
+
+  time {
+    box-shadow: 0 0 0 .0625rem green;
+    color: #22be61;
+    font-size: .6875rem;
+    font-weight: 700;
+    text-align: right;
+  }
+} */
+
+/* flex 내가 한 것 */
+/* .notification {
+  background: var(--yellow);
+  padding: 1.25rem;
+  display: flex;
+  gap: 1.25rem;
+  border-radius: .5rem;
+  border: .0625rem solid #f9fefe;
+  box-shadow: 0 .125rem .125rem rgba(114, 119, 114, 0.2);
+
+  svg {
+    color: #22be61;
+  }
+  div {
+    box-shadow: 0 0 0 .0625rem blue;
+    inline-size: 100%;
+  }
+
+  strong {
+    color: #22be61;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: #929b90;
+    font-size: .875rem;
+    font-weight: 400;
+  }
+
+  time {
+    box-shadow: 0 0 0 .0625rem green;
+    width: 2rem;
+    color: #22be61;
+    font-size: .6875rem;
+    font-weight: 700;
+    text-align: right;
+    block-size: 100%;
+  }
+} */
+
+/* float을 활용한 레이아웃 */
+/* .notification {
+  background: var(--yellow);
+  padding: 1.25rem;
+  display: flow-root;
+
+  svg {
+    float: left;
+  }
+  div {
+    box-shadow: 0 0 0 .0625rem blue;
+    float: left;
+    margin-inline: 1.25rem;
+    width: calc(100% - 6.25rem);
+  }
+
+  strong {
+    color: #22be61;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  p {
+    color: #929b90;
+    font-size: .875rem;
+    font-weight: 400;
+  }
+  time {
+    box-shadow: 0 0 0 .0625rem green;
+    float: left;
+    width: 2rem;
+    color: #22be61;
+    font-size: .6875rem;
+    font-weight: 700;
+    text-align: right;
+  }
+} */
+
+/* 내가 한 것 */
+/* div {
+    --color-ngreen: #22be61;
+    --color-ngray: #929b90;
+    --color-nlgray: #f9fefe;
+  }
+  .notification {
+    border: .0625rem solid red;
+    border-radius: .5rem;
+    overflow: hidden;
+
+    svg {
+      float: inline-start;
+    }
+    div {
+      border: .125rem solid blue;
+      float: inline-start;
+    }
+    strong {
+      border: .125rem solid green;
+      color: var(--color-ngreen);
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    p {
+      color: var(--color-ngray);
+      font-weight: 400;
+      font-size: 14px;
+    }
+    time {
+      float: inline-start;
+      color: var(--color-ngreen);
+      font-weight: 700;
+      font-size: 11px;
+    }
+  } */
+.notifications {
+  /* background: var(--yellow); */
+  /* box-shadow: 0 0 0 10px red; */
+  display: flex;
+  flex-flow: wrap row;
+  gap: 20px;
+
+  li {
+    display: contents;
+  }
+  .notification {
+    width: 100%;
+
+    @media (width > 400px) {
+      flex: 1 1 0;
+    }
+  }
+}
