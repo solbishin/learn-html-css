@@ -1,11 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
 /* 검색어 입력서식 */
 .searchbar {
-  background: yellow;
+  --green-100: #03cc5c;
+  --green-200: #1bf008;
+  --green-300: #03cca8;
+
+  --gray-100: #bcc3c7;
+  --gray-200: #9b9a90;
+  --gray-300: #6d7478;
+
+  --border-color: var(--green-100);
+
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: start;
+  align-items: start;
+  column-gap: 12px;
+  padding: 12px 12px 12px 20px;
+  border-radius: 48px;
+
+  &:focus-within {
+    box-shadow: 0 2px 2px 0 var(--gray-300);
+  }
+
+  .searchbar-form,
+  .input-wrapper {
+    display: contents;
+  }
+
+  svg {
+    vertical-align: top;
+  }
+
+  .logo,
+  .circle-gradient {
+    flex: 0 0 auto;
+  }
+
+  input {
+    flex: 1 1 0;
+    margin-right: 4px;
+    height: 24px;
+    border: 0;
+    min-width: 0;
+    background: transparent;
+    outline: none;
+  }
+
+  /* X 버튼은 Safari, Chrome, Edge, Opera 등 webkit 및 blink 엔진을 사용하는 웹브라우저의 기본 스타일 */
+  /* X 버튼을 제거하고 싶다면 :-webkit-search-cancel-button 선택자를 사용하여 display 속성 값을 none으로 지정 */
+  [type='search']::-webkit-search-cancel-button {
+    display: none;
+  }
 
   .circle-gradient {
-    --size: 48px;
+    --size: 24px;
+    --start-color: var(--green-200, #1bf008);
+    --end-color: var(--green-300, #03cca8);
 
-    background: linear-gradient(lime, green);
+    background: linear-gradient(135deg, var(--start-color), var(--end-color));
     border: 0;
     padding: 0;
     width: var(--size);
@@ -20,8 +75,128 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      /* transform: translate(-50%, -50%); -> 처음 등장한 방식*/
-      /* translate -> 최근 새로 등장한 방식  */
+      /* transform: translate(-50%, -50%) rotate(); */
+      translate: -50% -50%;
+      width: var(--inner-size);
+      aspect-ratio: 1/1;
+      background: #fff;
+      border-radius: inherit;
+    }
+  }
+}
+
+.likelion {
+  background: yellow;
+  margin-block: 20px;
+
+  span {
+    background: pink;
+    font-size: 24px;
+  }
+
+  em {
+    background: lime;
+    vertical-align: top;
+  }
+}
+
+strong {
+  background: orange;
+  vertical-align: middle;
+}
+
+/* 텍스트 로고 */
+.text-logo {
+  --size: 34.7504px;
+  --start-color: var(--green-200);
+  --end-color: var(--green-300);
+
+  /* background: yellow; */
+  display: inline-flex;
+  flex-flow: nowrap row;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--size) * 0.7);
+
+  .text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 34.7504px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--start-color, #1bf008), var(--end-color, #03cca8));
+    color: transparent;
+    background-clip: text;
+    line-height: 0.7;
+  }
+}
+
+/* 처음코드 */
+
+/* .searchbar {
+  --green-100: #03cc5c;
+  --green-200: #1bf008;
+  --green-300: #03cca8;
+
+  --gray-100: #bcc3c7;
+  --gray-200: #9b9a90;
+  --gray-300: #6d7478;
+
+  
+  display: flex;
+  flex-flow: nowrap row;
+  gap: 12px;
+
+  padding: 12px 12px 12px 20px;
+  border: 1px solid var(--green-100);
+  border-radius: 32px;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  .searchbar-form {
+    
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 12px;
+    flex-grow: 1;
+
+    justify-content: start;
+    align-items: start;
+  }
+
+  .input-wrapper {
+    
+    width: 100%;
+    flex-grow: 1;
+
+    input {
+      width: 100%;
+      height: 24px;
+    }
+  }
+
+  .circle-gradient {
+    --size: 24px;
+    --start-color: var(--green-200, #1bf008);
+    --end-color: var(--green-300, #03cca8);
+
+    background: linear-gradient(135deg, var(--start-color), var(--end-color));
+    border: 0;
+    padding: 0;
+    width: var(--size);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+
+    &::before {
+      --inner-size: calc(var(--size) / 3);
+
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
       translate: -50% -50%;
       width: calc(var(--inner-size) / var(--size) * 100%);
       height: calc(var(--inner-size) / var(--size) * 100%);
@@ -29,4 +204,4 @@
       border-radius: inherit;
     }
   }
-}
+} */
