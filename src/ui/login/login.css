@@ -220,3 +220,72 @@
     }
   }
 }
+
+/* 네이버 로그인 레이아웃 */
+/* 헤더 */
+.header {
+  padding-block: 70px 45px;
+
+  @media (width >= 768px) {
+    padding-block: 100px 50px;
+  }
+
+  /* 로고 */
+  .logo {
+    margin-inline: auto;
+  }
+}
+
+/* 메인 콘텐츠 */
+.main {
+  padding-inline: 15px;
+
+  /* 로그인 폼 */
+  .login-form {
+    display: flex;
+    flex-flow: nowrap column;
+    row-gap: 10px;
+
+    @media (width>= 768px) {
+      inline-size: 460px;
+      margin-inline: auto;
+    }
+  }
+
+  .checkbox-wrapper {
+    order: 1;
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+    column-gap: 8px;
+
+    .checkbox {
+      margin-inline-start: auto;
+    }
+
+    .textlink-new,
+    .switch {
+      display: none;
+    }
+
+    @media (width>= 768px) {
+      .textlink-new,
+      .switch {
+        display: block;
+      }
+
+      .checkbox {
+        margin-inline-start: 0;
+      }
+
+      .textlink-new {
+        margin-inline-start: auto;
+      }
+    }
+  }
+
+  /* 버튼 */
+  .button {
+    inline-size: 100%;
+  }
+}
