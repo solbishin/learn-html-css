@@ -3,7 +3,8 @@
 .like,
 .lion,
 .euid,
-.frontend {
+.frontend,
+.bootcamp {
   > div:nth-child(1) {
     background: var(--pink);
   }
@@ -132,4 +133,12 @@
     align-self: end; */
     place-self: end;
   }
+}
+
+/* minmax() 함수, repeat() 함수 */
+.bootcamp {
+  display: grid;
+  /* grid-template-columns: repeat(5, minmax(100px, 1fr)); */
+  grid-auto-rows: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
