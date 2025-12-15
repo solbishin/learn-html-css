@@ -1,1 +1,62 @@
 /* 메인 페이지 스타일 */
+
+body {
+  background: radial-gradient(circle at 30% 0%, #f1f1f1 0%, #6f61ee 80%, #68c1fd 90%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 32px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 18px;
+
+  @media (max-width: 780px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  grid-column: 1 / -1;
+  font-size: 48px;
+
+  color: #464765;
+
+  /* background: linear-gradient(to right, #705fdb, #aa99e0);
+  color: transparent;
+  background-clip: text; */
+}
+
+.html,
+.css,
+.ui {
+  background: rgba(256, 256, 256, 1);
+  /* border: 1px solid rgba(256, 256, 256, 0.3); */
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  padding: 24px;
+  border-radius: 24px;
+
+  color: #3d4046;
+
+  h2 {
+    color: #111;
+    margin-block-end: 8px;
+    font-size: 20px;
+  }
+
+  li {
+    height: 1.75rem;
+    line-height: 2rem;
+    margin-left: -15px;
+    padding-left: 15px;
+
+    &:hover {
+      background: #f5faff;
+      border-radius: 8px;
+    }
+  }
+}
