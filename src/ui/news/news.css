@@ -50,3 +50,58 @@
     place-self: start end;
   }
 }
+
+/* 공지사항 - grid 레이아웃 */
+.notice {
+  --spacing: 16px;
+
+  background: yellow;
+  display: grid;
+  grid-template-columns: 125px minmax(200px, 1fr);
+  border: 1px solid var(--gray);
+
+  h2,
+  div {
+    background: var(--blue-300);
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  h2 {
+    padding: var(--spacing);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  div {
+    place-self: end;
+    display: flex;
+    flex-flow: nowrap row;
+    padding: var(--spacing);
+
+    button {
+      border: 0;
+      padding: 0;
+      background: none;
+
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  article {
+    padding: var(--spacing);
+    background: var(--white);
+
+    h3 {
+      color: var(--blue-200);
+    }
+
+    p {
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+      margin-top: 10px;
+    }
+  }
+}
